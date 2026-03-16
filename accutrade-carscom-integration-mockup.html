@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accutrade Cars.com Integration Mockup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .integration-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Accutrade - Cars.com Integration Mockup</h1>
+        
+        <div class="integration-section">
+            <h2>Integration Status</h2>
+            <div class="status success">
+                <strong>✓ Connected:</strong> Accutrade Hub is successfully integrated with Cars.com API
+            </div>
+            <div class="status info">
+                <strong>ℹ Last Sync:</strong> March 16, 2026 at 12:00 PM
+            </div>
+        </div>
+        
+        <div class="integration-section">
+            <h2>Available Features</h2>
+            <ul>
+                <li>Real-time inventory synchronization</li>
+                <li>Lead capture and routing</li>
+                <li>Vehicle data mapping</li>
+                <li>Analytics dashboard integration</li>
+                <li>Automated pricing updates</li>
+            </ul>
+        </div>
+        
+        <div class="integration-section">
+            <h2>API Endpoints</h2>
+            <ul>
+                <li><code>GET /api/inventory</code> - Retrieve current inventory</li>
+                <li><code>POST /api/leads</code> - Submit new leads</li>
+                <li><code>PUT /api/vehicles/{id}</code> - Update vehicle information</li>
+                <li><code>GET /api/sync/status</code> - Check synchronization status</li>
+            </ul>
+        </div>
+        
+        <div class="integration-section">
+            <h2>Test Actions</h2>
+            <button onclick="testConnection()">Test Connection</button>
+            <button onclick="syncInventory()">Sync Inventory</button>
+            <button onclick="viewLogs()">View Logs</button>
+        </div>
+        
+        <div id="results" class="integration-section" style="display: none;">
+            <h2>Test Results</h2>
+            <pre id="results-content"></pre>
+        </div>
+    </div>
+
+    <script>
+        function testConnection() {
+            showResults('Connection test successful! API is responding.');
+        }
+        
+        function syncInventory() {
+            showResults('Inventory synchronization initiated. 150 vehicles processed.');
+        }
+        
+        function viewLogs() {
+            showResults('Integration logs:\n- 2026-03-16 12:00: Connection established\n- 2026-03-16 12:05: Inventory sync completed\n- 2026-03-16 12:10: Lead routing active');
+        }
+        
+        function showResults(content) {
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('results-content').textContent = content;
+        }
+    </script>
+</body>
+</html>
